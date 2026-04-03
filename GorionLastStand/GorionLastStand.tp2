@@ -1,11 +1,15 @@
 BACKUP ~GorionLastStand/backup~
 AUTHOR ~MephistoSatanDevil~
-VERSION ~Version 0.1~
+VERSION ~Version 0.2~
 README ~GorionLastStand/Languages/%LANGUAGE%/readme.txt~ ~GorionLastStand/readme.md~
 AUTO_TRA ~GorionLastStand/Languages/%s~
 
-LANGUAGE ~English~ ~english~ ~GorionLastStand/Languages/english/setup.tra~
 LANGUAGE ~Chinese (Simplified)~ ~chinese~ ~GorionLastStand/Languages/schinese/setup.tra~
+LANGUAGE ~English~ ~english~ ~GorionLastStand/Languages/english/setup.tra~
+LANGUAGE ~French~ ~francais~ ~GorionLastStand/Languages/francais/setup.tra~
+LANGUAGE ~Russian~ ~russian~ ~GorionLastStand/Languages/russian/setup.tra~
+LANGUAGE ~German~ ~deutsch~ ~GorionLastStand/Languages/deutsch/setup.tra~
+
 
 BEGIN @1000
 
@@ -15,8 +19,7 @@ DECOMPILE_AND_PATCH BEGIN
 		~ActionOverride("Gorion",Kill("Gorion"))
         ActionOverride("Gorion",DisplayStringHeadDead("Gorion",@1))
         SmallWait(2)
-        ActionOverride("Gorion",ReallyForceSpell("Sarevok",WIZARD_FIREBALL))
-        ActionOverride("Gorion",ReallyForceSpell("Sarevok",WIZARD_CHAIN_LIGHTNING))
+        ActionOverride("Gorion",ReallyForceSpell("Gorion",KAMIKAZE_EXPLOSION))
         Wait(2)
         ScreenShake([30.30],5)
         ActionOverride("Sarevok",DisplayStringHead("Sarevok",@2))~
