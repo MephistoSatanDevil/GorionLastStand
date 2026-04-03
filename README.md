@@ -1,3 +1,5 @@
+![Language](https://img.shields.io/static/v1?label=language&message=Chinese%20%7C%20English%20%7C%20Russian%20%7C%20French&color=limegreen )
+![Supported games](https://img.shields.io/static/v1?label=supported%20games&message=BGEE%20%7C%20EET&color=dodgerblue )
 # Gorion's Last Stand - Mod for Baldur's Gate Enhanced Edition
 
 **Version:** 0.2  
