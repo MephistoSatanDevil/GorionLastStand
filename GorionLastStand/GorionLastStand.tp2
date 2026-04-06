@@ -1,6 +1,6 @@
 BACKUP ~GorionLastStand/backup~
 AUTHOR ~MephistoSatanDevil~
-VERSION ~Version 0.2~
+VERSION ~Version 0.3~
 README ~GorionLastStand/Languages/%LANGUAGE%/readme.txt~ ~GorionLastStand/readme.md~
 AUTO_TRA ~GorionLastStand/Languages/%s~
 
@@ -19,9 +19,13 @@ DECOMPILE_AND_PATCH BEGIN
 		~ActionOverride("Gorion",Kill("Gorion"))
         ActionOverride("Gorion",DisplayStringHeadDead("Gorion",@1))
         SmallWait(2)
-        ActionOverride("Gorion",ReallyForceSpell("Gorion",KAMIKAZE_EXPLOSION))
-        Wait(2)
+        ActionOverride("Gorion",ReallyForceSpellDead("Gorion",KAMIKAZE_EXPLOSION))
         ScreenShake([30.30],5)
+        Wait(2)
         ActionOverride("Sarevok",DisplayStringHead("Sarevok",@2))~
+	REPLACE_TEXTUALLY CASE_SENSITIVE ~ApplySpellRES("cuthide",Player1)~
+		~MoveToPoint([3176.2182])
+        MoveToPoint([3262.2565])
+        ApplySpellRES("cuthide",Player1)~
 END
 BUT_ONLY_IF_IT_CHANGES
